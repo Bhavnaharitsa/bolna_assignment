@@ -1,0 +1,36 @@
+{
+  "start_node_id": "node_1",
+  "nodes": [
+    {
+      "id": "node_1",
+      "description": "Initial greeting node",
+      "prompt": "Hello! How can I help you today?",
+      "edges": [
+        {
+          "to_node_id": "node_2",
+          "condition": "user says hello",
+          "parameters": {
+            "greeting_type": "casual"
+          }
+        }
+      ]
+    },
+    {
+      "id": "node_2",
+      "description": "Response handling node",
+      "prompt": "I understand you said hello. What would you like to do next?",
+      "edges": [
+        {
+          "to_node_id": "node_3",
+          "condition": "user wants to continue"
+        }
+      ]
+    },
+    {
+      "id": "node_3",
+      "description": "Final node",
+      "prompt": "Thank you for using our service!",
+      "edges": []
+    }
+  ]
+}
