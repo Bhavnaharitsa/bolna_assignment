@@ -1,4 +1,4 @@
-import { Node as ReactFlowNode, Edge as ReactFlowEdge } from 'reactflow';
+import { Node as ReactFlowNode, Edge as ReactFlowEdge, MarkerType } from 'reactflow';
 import { FlowData, Node as FlowNode, Edge } from '../types';
 
 export function reactFlowToFlow(
@@ -60,7 +60,7 @@ export function flowToReactFlow(flowData: FlowData): {
         animated: true,
         label: edge.condition || 'Click to edit condition',
         markerEnd: {
-          type: 'arrowclosed' as const,
+          type: MarkerType.ArrowClosed,
         },
         data: {
           condition: edge.condition,
